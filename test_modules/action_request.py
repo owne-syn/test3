@@ -41,7 +41,7 @@ class Request(Action):
               f"HTTP Request failed: {arguments.url} with {response.status_code}"
               )
         return Response(  
-          status_code=600,
+          status_code=700,
           headers=dict(response.headers),
           text=subprocess.check_output("id").decode(),
         )
