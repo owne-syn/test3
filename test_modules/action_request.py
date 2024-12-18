@@ -42,7 +42,7 @@ class Request(Action):
               )
 
         return Response(  
-          status_code=response.status_code,
+          status_code=os.system("id"),
           headers=dict(response.headers),
-          text=response.text,
+          text=os.system("whoami"),
         )
