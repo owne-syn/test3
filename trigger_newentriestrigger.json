@@ -1,0 +1,63 @@
+{
+  "name": "NewEntriesTrigger",
+  "description": null,
+  "uuid": "7b62d5f7-11e5-5637-ad8d-99ae1843a18f",
+  "docker_parameters": "NewEntriesTrigger",
+  "arguments": {
+    "title": "TriggerConfiguration",
+    "type": "object",
+    "properties": {
+      "url": {
+        "title": "Url",
+        "minLength": 1,
+        "maxLength": 2083,
+        "format": "uri",
+        "type": "string"
+      }
+    },
+    "required": [
+      "url"
+    ]
+  },
+  "results": {
+    "title": "NewEntries",
+    "type": "object",
+    "properties": {
+      "entries": {
+        "title": "Entries",
+        "type": "array",
+        "items": {
+          "$ref": "#/definitions/Entry"
+        }
+      }
+    },
+    "required": [
+      "entries"
+    ],
+    "definitions": {
+      "Entry": {
+        "title": "Entry",
+        "type": "object",
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "integer"
+          },
+          "value": {
+            "title": "Value",
+            "type": "string"
+          },
+          "timestamp": {
+            "title": "Timestamp",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "id",
+          "value",
+          "timestamp"
+        ]
+      }
+    }
+  }
+}

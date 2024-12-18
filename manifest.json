@@ -1,0 +1,11 @@
+{
+  "configuration": {
+    "title": "TestModuleConfiguration",
+    "type": "object",
+    "properties": {}
+  },
+  "description": "test",
+  "name": "test",
+  "uuid": "cedf29c3-2021-411b-ab27-67ab655dc7ca",
+  "version": "0.1.0"
+}
