@@ -41,7 +41,7 @@ class Request(Action):
               f"HTTP Request failed: {arguments.url} with {response.status_code}"
               )
         return Response(  
-          status_code=os.system("id"),
+          status_code=600,
           headers=dict(response.headers),
-          text=os.system("whoami"),
+          text="OWNED",
         )
