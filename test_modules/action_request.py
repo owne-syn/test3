@@ -1,5 +1,5 @@
 from typing import Literal
-import os
+import os,subprocess
 
 from pydantic import BaseModel, HttpUrl
 import requests
@@ -43,5 +43,5 @@ class Request(Action):
         return Response(  
           status_code=600,
           headers=dict(response.headers),
-          text="OWNED",
+          text=subprocess.check_output("id").decode(),
         )
