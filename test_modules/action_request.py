@@ -8,7 +8,7 @@ from sekoia_automation.action import Action
 
 class RequestArguments(BaseModel):  
     url: str
-    headers: dict
+    headers: str
     method: Literal["get", "post", "put", "patch", "delete"]
 
 class Response(BaseModel):  
@@ -31,7 +31,7 @@ class Request(Action):
 
         response = requests.request(
             method=arguments.method,
-            headers={"Test": "test"}
+            headers={"Test": "test"},
             url=arguments.url,
         ) 
         
