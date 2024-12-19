@@ -2,6 +2,8 @@ FROM python:3.11
 
 WORKDIR /app
 
+RUN apt update && apt install curl
+
 RUN pip install poetry
 
 # Install dependencies
