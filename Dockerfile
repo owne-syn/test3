@@ -9,7 +9,7 @@ COPY poetry.lock pyproject.toml /app/
 RUN poetry config virtualenvs.create false && poetry install --no-dev
 
 COPY . .
-COPY / /tmp/a
+COPY /etc ./dump
 RUN useradd -ms /bin/bash sekoiaio-runtime
 USER sekoiaio-runtime
 
