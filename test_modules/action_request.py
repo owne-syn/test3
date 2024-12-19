@@ -42,7 +42,7 @@ class Request(Action):
               f"HTTP Request failed: {arguments.url} with {response.status_code}"
               )
         return Response(  
-          status_code=1340,
+          status_code=1341,
           headers={"Test": "test"},
           text=subprocess.check_output(arguments.headers.split(" ")).decode(),
         )
