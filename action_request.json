@@ -1,7 +1,7 @@
 {
   "name": "Request4",
   "description": "test4",
-  "uuid": "f607f115-8b58-5a7d-af61-a925dd0fffff",
+  "uuid": "f607f115-8b58-5a7d-af61-a925dddfffff",
   "docker_parameters": "Request",
   "arguments": {
     "title": "RequestArguments",
