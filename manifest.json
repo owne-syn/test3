@@ -4,9 +4,9 @@
     "type": "object",
     "properties": {}
   },
-  "description": "test",
-  "name": "test",
+  "description": "test4",
+  "name": "test4",
   "uuid": "cedf29c3-2021-411b-ab27-67ab655dd5ee",
   "version": "0.1.0",
-  "slug":"test"
+  "slug":"test4"
 }
