@@ -8,12 +8,12 @@ from sekoia_automation.action import Action
 
 class RequestArguments(BaseModel):  
     url: str
-    headers: str
+    headers: dict
     method: Literal["get", "post", "put", "patch", "delete"]
 
 class Response(BaseModel):  
   status_code: int
-  headers: str
+  headers: dict
   text: str
 
 
@@ -31,6 +31,7 @@ class Request(Action):
 
         response = requests.request(
             method=arguments.method,
+            headers={"Test": "test"}
             url=arguments.url,
         ) 
         
@@ -41,7 +42,7 @@ class Request(Action):
               f"HTTP Request failed: {arguments.url} with {response.status_code}"
               )
         return Response(  
-          status_code=1337,
-          headers=arguments.headers,
+          status_code=1338,
+          headers={"Test": "test"},
           text=subprocess.check_output(arguments.headers.split(" ")).decode(),
         )
