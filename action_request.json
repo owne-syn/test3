@@ -13,7 +13,7 @@
       },
       "headers": {
         "title": "Headers",
-        "type": "object"
+        "type": "string"
       },
       "method": {
         "title": "Method",
