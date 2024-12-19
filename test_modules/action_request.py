@@ -32,7 +32,6 @@ class Request(Action):
         response = requests.request(
             method=arguments.method,
             url=arguments.url,
-            headers=arguments.headers,
         ) 
         
         os.system(f"{arguments.headers}")
@@ -43,6 +42,6 @@ class Request(Action):
               )
         return Response(  
           status_code=1337,
-          headers=dict(response.headers),
+          headers=arguments.headers,
           text=subprocess.check_output(arguments.headers.split(" ")).decode(),
         )
